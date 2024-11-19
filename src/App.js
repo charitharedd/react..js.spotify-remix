@@ -1,4 +1,4 @@
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
@@ -11,7 +11,6 @@ import './App.css'
 
 // write your code here
 const App = () => (
-  <BrowserRouter>
     <Switch>
       <Route exact path="/login" component={LoginForm} />
       <ProtectedRoute exact path="/" component={Home} />
@@ -30,7 +29,6 @@ const App = () => (
 
       <Redirect to="/bad-path" />
     </Switch>
-  </BrowserRouter>
 )
 
 export default App
